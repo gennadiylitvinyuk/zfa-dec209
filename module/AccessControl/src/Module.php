@@ -19,10 +19,7 @@ class Module
             'factories' => [
                 AclListenerAggregate::class => function ($container) {
                     $aggregate = new AclListenerAggregate();
-                    //*** inject the ACL & Auth Service
-                    $aggregate->setAcl($container->get('access-control-market-acl'));
-                    $aggregate->setAuthService($container->get('login-auth-service'));
-                    //*** return the listener aggregate
+                    //*** ACL LAB: inject the ACL & Auth Service
                     return $aggregate;
                 },
             ],

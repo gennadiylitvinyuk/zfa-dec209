@@ -11,14 +11,14 @@ class Aggregate extends AbstractListenerAggregate
     public function attach(EventManagerInterface $e, $priority = 100)
     {
         $shared = $e->getSharedManager();
-        $this->listeners[] = $shared->attach('*', MvcEvent::EVENT_DISPATCH, [$this, 'injectAuthService']);
+        $this->listeners[] = '???';
     }
     public function injectAuthService(MvcEvent $e)
     {
         $layout = $e->getViewModel();
         //*** AUTHENTICATION LAB: use service container to retrieve the auth service
         $sm = $e->getApplication()->getServiceManager();
-        $authService = $sm->get('login-auth-service');
+        $authService = '???';
         //*** AUTHENTICATION LAB: inject auth service into layout
         $layout->setVariable('authService', $authService);
     }

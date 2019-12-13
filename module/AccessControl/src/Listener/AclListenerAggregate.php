@@ -7,6 +7,7 @@ use Login\Traits\AuthServiceTrait;
 use Zend\Mvc\MvcEvent;
 use Zend\Authentication\AuthenticationService;
 use Zend\EventManager\ {AbstractListenerAggregate,EventManagerInterface};
+
 class AclListenerAggregate extends AbstractListenerAggregate
 {
 	use AclTrait;
@@ -17,10 +18,9 @@ class AclListenerAggregate extends AbstractListenerAggregate
 
     public function attach(EventManagerInterface $e, $priority = 100)
     {
-        //*** ACCESS CONTROL LAB: attach the "checkAcl" and "injectAcl" listeners to the MVC "dispatch" event using the shared manager
+        //*** ACL LAB: attach the "checkAcl" and "injectAcl" listeners to the MVC "dispatch" event using the shared manager
         $shared = $e->getSharedManager();
-        $this->listeners[] = $shared->attach('*', MvcEvent::EVENT_DISPATCH,  [$this, 'injectAcl'], 2);
-        $this->listeners[] = $shared->attach('*', MvcEvent::EVENT_DISPATCH,  [$this, 'checkAcl'], 999);
+        //$this->listeners[] = $shared->attach('???');
     }
     public function injectAcl(MvcEvent $e)
     {
@@ -29,14 +29,14 @@ class AclListenerAggregate extends AbstractListenerAggregate
     }
     public function checkAcl(MvcEvent $e)
     {
-        //*** ACCESS CONTROL LAB: pull resource and rights from route match
+        //*** ACL LAB: pull resource and rights from route match
         $match = $e->getRouteMatch();
         // get role
         $role = ($this->authService->hasIdentity())
               ? $this->authService->getIdentity()->getRole()
               : MarketAcl::DEFAULT_ROLE;
-        $denied = TRUE;
-        //*** ACCESS CONTROL LAB: make sure controller which is matched is in the list of resources
+        //*** ACL LAB: make sure controller which is matched is in the list of resources
+        $denied = '???';
         //*** if denied and we're not already going home ...
         if ($denied && $resource != self::DEFAULT_CONTROLLER) {
             $response = $e->getResponse();

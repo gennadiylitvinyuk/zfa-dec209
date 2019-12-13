@@ -25,7 +25,7 @@ class Module
                 Controller\IndexController::class => function ($container, $requestedName) {
                     $controller = new $requestedName();
                     $controller->setAcl($container->get('access-control-market-acl'));
-                    $controller->setAuthService($container->get('login-auth-service'));
+ //                   $controller->setAuthService($container->get('login-auth-service'));
                     return $controller;
                 },
                 Controller\AdminController::class  => function ($container, $requestedName) {
@@ -76,22 +76,6 @@ class Module
 				},
                 'events-service-container' => function ($container) {
                     return $container;
-                },
-                //*** ABSTRACT FACTORIES LAB: define a single abstract factory to build these table classes
-                Model\EventTable::class => function ($container, $requestedName) {
-                    return new $requestedName($container->get('events-db-adapter'),
-                                              $container->get(Event::class),
-                                              $container);
-                },
-                Model\RegistrationTable::class => function ($container, $requestedName) {
-                    return new $requestedName($container->get('events-db-adapter'),
-                                              $container->get(Registration::class),
-                                              $container);
-                },
-                Model\AttendeeTable::class => function ($container, $requestedName) {
-                    return new $requestedName($container->get('events-db-adapter'),
-                                              $container->get(Attendee::class),
-                                              $container);
                 },
 				'events-navigation' => function ($container) {
 	                $factory = new ConstructedNavigationFactory($container->get('events-nav-Config'));

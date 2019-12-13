@@ -2,7 +2,7 @@
 namespace AccessControl\Assertion;
 
 use DateTime;
-//*** ACCESS CONTROL LAB: use the appropriate classes
+//*** ACL LAB: use the appropriate classes
 
 class DateTimeAssert implements AssertionInterface
 {
@@ -14,10 +14,9 @@ class DateTimeAssert implements AssertionInterface
         $this->stopTime = $stop;
     }
 
-    //*** ACCESS CONTROL LAB: define the correct signature for the assert() method
+    //*** ACL LAB: return a boolean which asserts current date/time is between startTime and stopTime
     public function assert()
     {
-        $now   = new DateTime('now');
-        return (($this->startTime <= $now) && ($now <= $this->stopTime));
+        return '???';
     }
 }

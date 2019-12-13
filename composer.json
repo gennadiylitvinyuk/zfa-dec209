@@ -16,7 +16,7 @@
         "zendframework/zend-component-installer": "^1.0 || ^0.3 || ^1.0.0-dev@dev",
         "zendframework/zend-mvc": "^3.0.1",
         "zfcampus/zf-development-mode": "^3.0",
-        "zendframework/zend-cache": "*",
+        "zendframework/zend-cache": "^2.9",
         "zendframework/zend-debug": "*",
         "zendframework/zend-db": "*",
         "zendframework/zend-form": "*",
@@ -28,14 +28,20 @@
         "zendframework/zend-mvc-plugin-flashmessenger": "^1.0",
         "zendframework/zend-mvc-plugin-fileprg": "^1.0",
         "zendframework/zend-log": "^2.10",
-        "zendframework/zend-navigation": "^2.9"
+        "zendframework/zend-navigation": "^2.9",
+        "zendframework/zend-code": "^3.4",
+        "doctrine/annotations": "^1.8",
+        "zendframework/zend-permissions-acl": "^2.7",
+        "zendframework/zend-authentication": "^2.7"
     },
     "autoload": {
         "psr-4": {
             "Application\\": "module/Application/src/",
             "Market\\": "module/Market/src/",
             "Model\\": "module/Model/src/",
-            "Events\\": "module/Events/src/"
+            "Events\\": "module/Events/src/",
+            "AccessControl\\": "module/AccessControl/src/",
+            "Login\\": "module/Login/src/"
         }
     },
     "autoload-dev": {

@@ -56,6 +56,25 @@ class SignupController extends AbstractActionController
 	//*** DATABASE TABLE MODULE RELATIONSHIPS LAB: define this method such that for any given event, registrations and associated attendees are saved
     protected function processForm(array $formData, $eventId)
     {
+        $this->setBindings($eventId);
+        $this->regForm->setData($formData);
+
+        if (!$this->regForm->isValid()) {
+            return false;
+        }
+
+        var_dump($this->regForm->getData());
+
+        for ($i = 0; $i < Module::MAX_NAMES_PER_TICKET ; $i++) {
+            if ($this->regForm->get('attendee_'. $i)->isValid()) {
+                $r = $this->regForm->get('attendee_' . $i)->getData();
+                var_dump($r);
+            } else {
+                var_dump('not valid');
+            }
+        }
+       
+
     }
 
 	protected function setBindings($eventId)

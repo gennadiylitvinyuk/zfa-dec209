@@ -29,6 +29,7 @@ class ComposerStaticInitb33eab612e8c6178e6d4291239a42a09
             'Zend\\Session\\' => 13,
             'Zend\\ServiceManager\\' => 20,
             'Zend\\Router\\' => 12,
+            'Zend\\Permissions\\Acl\\' => 21,
             'Zend\\Navigation\\' => 16,
             'Zend\\Mvc\\Plugin\\FlashMessenger\\' => 31,
             'Zend\\Mvc\\Plugin\\FilePrg\\' => 24,
@@ -52,8 +53,10 @@ class ComposerStaticInitb33eab612e8c6178e6d4291239a42a09
             'Zend\\Console\\' => 13,
             'Zend\\Config\\' => 12,
             'Zend\\ComponentInstaller\\' => 24,
+            'Zend\\Code\\' => 10,
             'Zend\\Captcha\\' => 13,
             'Zend\\Cache\\' => 11,
+            'Zend\\Authentication\\' => 20,
             'ZendDeveloperTools\\' => 19,
             'ZF\\DevelopmentMode\\' => 19,
         ),
@@ -79,6 +82,10 @@ class ComposerStaticInitb33eab612e8c6178e6d4291239a42a09
             'Market\\' => 7,
             'MarketTest\\' => 11,
         ),
+        'L' => 
+        array (
+            'Login\\' => 6,
+        ),
         'I' => 
         array (
             'Interop\\Container\\' => 18,
@@ -90,12 +97,15 @@ class ComposerStaticInitb33eab612e8c6178e6d4291239a42a09
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
+            'Doctrine\\Common\\Lexer\\' => 22,
+            'Doctrine\\Common\\Annotations\\' => 28,
             'DeepCopy\\' => 9,
         ),
         'A' => 
         array (
             'Application\\' => 12,
             'ApplicationTest\\' => 16,
+            'AccessControl\\' => 14,
         ),
     );
 
@@ -137,6 +147,10 @@ class ComposerStaticInitb33eab612e8c6178e6d4291239a42a09
         'Zend\\Router\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-router/src',
+        ),
+        'Zend\\Permissions\\Acl\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-permissions-acl/src',
         ),
         'Zend\\Navigation\\' => 
         array (
@@ -230,6 +244,10 @@ class ComposerStaticInitb33eab612e8c6178e6d4291239a42a09
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-component-installer/src',
         ),
+        'Zend\\Code\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-code/src',
+        ),
         'Zend\\Captcha\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-captcha/src',
@@ -237,6 +255,10 @@ class ComposerStaticInitb33eab612e8c6178e6d4291239a42a09
         'Zend\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-cache/src',
+        ),
+        'Zend\\Authentication\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-authentication/src',
         ),
         'ZendDeveloperTools\\' => 
         array (
@@ -286,6 +308,10 @@ class ComposerStaticInitb33eab612e8c6178e6d4291239a42a09
         array (
             0 => __DIR__ . '/../..' . '/module/Market/test',
         ),
+        'Login\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/module/Login/src',
+        ),
         'Interop\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
@@ -298,6 +324,14 @@ class ComposerStaticInitb33eab612e8c6178e6d4291239a42a09
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
+        'Doctrine\\Common\\Lexer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer',
+        ),
+        'Doctrine\\Common\\Annotations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
+        ),
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
@@ -309,6 +343,10 @@ class ComposerStaticInitb33eab612e8c6178e6d4291239a42a09
         'ApplicationTest\\' => 
         array (
             0 => __DIR__ . '/../..' . '/module/Application/test',
+        ),
+        'AccessControl\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/module/AccessControl/src',
         ),
     );
 

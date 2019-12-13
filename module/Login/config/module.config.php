@@ -29,13 +29,10 @@ return [
             Form\Login::class => Form\Factory\LoginFormFactory::class,
             Model\UsersTable::class => Model\Factory\UsersTableFactory::class,
             //*** AUTHENTICATION LAB: define aggregate as invokable
-            Listener\Aggregate::class => InvokableFactory::class,
         ],
     ],
-    'listeners' => [
-        //*** SECURITY::AUTHENTICATION LAB: add aggregate as listener
-        Listener\Aggregate::class
-    ],
+    //*** SECURITY::AUTHENTICATION LAB: add aggregate as listener
+    //'listeners' => [],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => Controller\Factory\IndexControllerFactory::class,

@@ -42,12 +42,12 @@ return [
     //'Zend\Mail',
     //'Notification',
     //*** AUTHENTICATION LAB
-//    'Login',
+    'Login',
     //*** ACL Lab
-//    'AccessControl',
+    'AccessControl',
     //'PrivateMessages',
     //*** NAVIGATION LAB
-    //'Zend\Navigation',
+    'Zend\Navigation',
     //*** REST LAB
     //'RestApi',
 ];

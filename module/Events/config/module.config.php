@@ -74,7 +74,7 @@ return [
                                     ],
                                 ],
                             ],
-                            //*** FORMS AND FIELDSETS LAB: add a route to AJAX request for Attendee sub-form
+                            //*** [OPTIONAL] LAB: Forms and Fieldsets: add a route to AJAX request for Attendee sub-form
                         ],
                     ],
                     'signup' => [
@@ -100,9 +100,9 @@ return [
     'service_manager' => [
 		'services' => [
 			'events-nav-Config' => [
-				['label' => 'Signup Form', 'class' => 'events-label', 'route' => 'events/signup', 'resource' => 'menu-events-signup-label' ], 
+				['label' => 'Signup Form', 'class' => 'events-label', 'route' => 'events/signup', 'resource' => 'menu-events-signup-label' ],
 				['label' => 'Signup', 'class' => 'btn btn-block btn-success btn-large', 'route' => 'events/signup', 'resource' => 'menu-events-signup' ],
-				['label' => 'Admin Area', 'class' => 'events-label', 'route' => 'events/admin', 'resource' => 'menu-events-admin-label' ], 
+				['label' => 'Admin Area', 'class' => 'events-label', 'route' => 'events/admin', 'resource' => 'menu-events-admin-label' ],
 				['label' => 'Admin Area', 'class' => 'btn btn-block btn-success btn-large', 'route' => 'events/admin', 'resource' => 'menu-events-admin' ],
 			],
 		],
@@ -114,7 +114,9 @@ return [
             Entity\Attendee::class => InvokableFactory::class,
         ],
 		//*** ABSTRACT FACTORIES LAB: define an abstract factory which sets the tableGateway property for all table module classes
-		// 'abstract_factories' => [],
+		'abstract_factories' => [
+            Model\TableAbstractFactory::class,
+        ],
 		//*** NAVIGATION LAB: define navigation for events as a service container service
     ],
     'view_helpers' => [

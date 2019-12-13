@@ -51,11 +51,7 @@ class Module
     {
         return [
 			'initializers' => [
-				'market-set-listings-table' => function ($container, $instance) {
-					if ($instance instanceof Controller\ListingsTableAwareInterface) {
-						$instance->setListingsTable($container->get('model-listings-table'));
-					}
-				},
+				Initializer\ListingsTableInitializer::class,
 			],
         ];
     }

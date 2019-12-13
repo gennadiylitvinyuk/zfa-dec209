@@ -53,18 +53,13 @@ class IndexController extends AbstractActionController
             } else {
                 $user = $this->loginForm->getData();
                 //*** AUTHENTICATION LAB: get the login adapter from the authentication service, set identity and credential and authenticate into $result
-                $adapter = $this->authService->getAdapter();
-                $adapter->setIdentity($user->getEmail());
-                $adapter->setCredential($user->getPassword());
-                $result = $adapter->authenticate();
+                $adapter = '???';
+                $result = '???';
                 if ($result->isValid()) {
                     //*** AUTHENTICATION LAB: get storage and the result row object; omit "password" column: don't want that to appear in storage
-                    $obj = $adapter->getResultRowObject(NULL, ['password']);
-                    // getResultRowObject() returns a stdClass instance ... need to hydrate into a User instance
+                    $obj = '???';
                     $user = new User((array) $obj);
                     //*** AUTHENTICATION LAB: write Login\Model\User instance to storage
-                    $storage = $this->authService->getStorage();
-                    $storage->write($user);
                     // success message
                     $message = self::LOGIN_SUCCESS;
                     $this->logMessage(Logger::INFO, self::LOGIN_SUCCESS . ':' . $user->getEmail());
@@ -96,8 +91,8 @@ class IndexController extends AbstractActionController
     protected function logMessage($level, $message)
     {
 		$this->getEventManager()
-		     ->trigger( self::EVENT_SOMETHING, 
-						$this, 
+		     ->trigger( self::EVENT_SOMETHING,
+						$this,
 						['level' => Logger::INFO, 'message' => $message]
 		);
 	}
