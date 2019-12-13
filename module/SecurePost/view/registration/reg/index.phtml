@@ -21,7 +21,8 @@
                 <dt><?= $this->formLabel($this->regForm->get('role')); ?></dt>
                 <dd><?= $this->formRadio($this->regForm->get('role')); ?><?= $this->formElementErrors($this->regForm->get('role')); ?></dd>
                 <p><span class="btn btn-success"><?= $this->formSubmit($this->regForm->get('submit')); ?></span></p>
-                <!-- DELEGATORS LAB: Display the CSRF --!>
+                <!-- DELEGATORS LAB: Display the CSRF -->
+                <?= $this->formElement($this->regForm->get('hash')) ?>
                 <?= $this->form()->closeTag(); ?>
             </div>
         </div>

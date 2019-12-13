@@ -26,10 +26,14 @@ return [
     'service_manager' => [
         //*** FORMS LAB: define factories for form and filter classes
         'factories' => [
+            Form\RegForm::class => Form\Factory\RegFormFactory::class,
+            Form\RegFilter::class => Form\Factory\RegFilterFactory::class,
         ],
         //*** FORMS LAB: define configuration services for roles
         'services' => [
             'registration-form-roles' => ['guest','user','admin'],
+            'registration-form-locales' => ['en', 'de', 'fr'],
+            'registration-form-providers' => ['google'],
         ],
     ],
     'controllers' => [

@@ -30,8 +30,8 @@ return [
     //*** DATABASE LABS
     'Events',
     //*** DELEGATORS LAB
-    //'Registration',
-    //'SecurePost',   // disable this and CSRF element disappears from the form
+    'Registration',
+    'SecurePost',   // disable this and CSRF element disappears from the form
     //*** CACHE LAB
     //'Cache',
     //*** SESSION LAB

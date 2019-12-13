@@ -24,7 +24,7 @@ class Module
             'factories' => [
                 Controller\IndexController::class => function ($container, $requestedName) {
                     $controller = new $requestedName();
-                    $controller->setAcl($container->get('access-control-market-acl'));
+ //                   $controller->setAcl($container->get('access-control-market-acl'));
  //                   $controller->setAuthService($container->get('login-auth-service'));
                     return $controller;
                 },

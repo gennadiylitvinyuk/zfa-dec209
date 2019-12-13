@@ -41,7 +41,9 @@
             "Model\\": "module/Model/src/",
             "Events\\": "module/Events/src/",
             "AccessControl\\": "module/AccessControl/src/",
-            "Login\\": "module/Login/src/"
+            "Login\\": "module/Login/src/",
+            "Registration\\": "module/Registration/src/",
+            "SecurePost\\": "module/SecurePost/src/"
         }
     },
     "autoload-dev": {
